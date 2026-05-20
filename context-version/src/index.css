@@ -1,0 +1,148 @@
+:root {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: #17181f;
+  background: radial-gradient(circle at 10% 20%, #f4f7f9 0%, #ecf0f4 45%, #dde4ea 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  border: 1px solid #c3cbd4;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  padding: 0.45rem 0.7rem;
+}
+
+.mode-switcher {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 1.25rem 1rem 0;
+}
+
+.mode-switcher .active {
+  border-color: #1b8e73;
+  background: #def8f0;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title-bar {
+  margin-bottom: 1rem;
+}
+
+.title-bar p {
+  color: #4d5562;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dbe1e8;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(34, 52, 71, 0.08);
+}
+
+.header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.dark,
+.sidebar.dark {
+  background: #142033;
+  color: #eff6ff;
+}
+
+.product-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #5b6471;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.sidebar {
+  align-self: start;
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.cart-item {
+  border-top: 1px solid #e3e8ef;
+  padding: 0.7rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary {
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
+.notice {
+  margin-top: 0.5rem;
+  color: #1f7b64;
+  font-size: 0.9rem;
+}
+
+.render-count {
+  font-size: 0.75rem;
+  color: #5b6471;
+  border: 1px dashed #b9c4d0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
